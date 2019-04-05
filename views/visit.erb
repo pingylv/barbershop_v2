@@ -1,0 +1,40 @@
+<h2>Come visit us!</h2>
+<p>Register below: </p>
+
+<script type="text/javascript">
+  $(function(){
+    $('#color').simplecolorpicker();
+  })
+</script>
+
+<form action="/visit" method="POST" >    
+
+  <div class="form-group">
+    <label>Youre name</label>
+    <input name="username" type="text" class="form-control" placeholder="Name.." value="<%=@username%>">
+
+  <div class="form-group">
+    <label>Youre phone</label>
+    <input name="phone" type="text" class="form-control" placeholder="phone number.." value="<%=@phone%>">
+
+  <div class="form-group">
+    <label>Date and Time</label>
+    <input name="datetime" type="text" class="form-control" placeholder="Enter the day.." value="<%=@datetime%>">
+	</p>
+
+<div class="form-group">
+  <label>Youre barber</label>
+	<select name="barber" class="form-control">
+    <% @barbers.each do |item| %>
+      <option <%= @barber == item['name'] ? 'selected' : ''%>><%= item['name'] %></option>
+    <% end %>
+
+	</select>
+	</p>
+
+</div>
+
+<div class="form-group">
+  <button type="submit" class="btn btn-success">Sign up</button>
+
+</form>
