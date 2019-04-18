@@ -41,8 +41,17 @@
   <option value="#ffffff">White</option>
   <option value="#000000">Black</option>
   <option value="#786759">Brown</option>
-
 </select>
+</div>
+
+<div class="form-group">
+  <label>Youre barber</label>
+    <select name="client[barber]" class="form-control">
+    <% @barbers.each do |item| %>
+    <option <%= @barber == item['name'] ? 'selected' : ''%>><%= item['name'] %></option>
+    <% end %>
+    </select>
+  </p>
 </div>
 
 

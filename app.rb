@@ -11,6 +11,7 @@ class Client < ActiveRecord::Base
 	validates :phone, presence: true, length: { minimum: 3 }
 	validates :datestamp, presence: true
 	validates :color, presence: true
+	validates :barber, presence: true
 end
 
 class Barber < ActiveRecord::Base
