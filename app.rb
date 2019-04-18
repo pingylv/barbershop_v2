@@ -34,6 +34,7 @@ post '/visit' do
     if c.save
 		erb "<h3> tnx lol </h3>"
 	else
-		erb "<h3> Error </h3>"
+		@error = c.errors.full_messages.first
+		erb :visit
 	end
 end
