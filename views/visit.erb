@@ -11,28 +11,40 @@
 
   <div class="form-group">
     <label>Youre name</label>
-    <input name="username" type="text" class="form-control" placeholder="Name.." value="<%=@username%>">
+    <input name="client[name]" type="text" class="form-control" placeholder="Name.." value="">
 
   <div class="form-group">
     <label>Youre phone</label>
-    <input name="phone" type="text" class="form-control" placeholder="phone number.." value="<%=@phone%>">
+    <input name="client[phone]" type="text" class="form-control" placeholder="phone number.." value="">
 
   <div class="form-group">
     <label>Date and Time</label>
-    <input name="datetime" type="text" class="form-control" placeholder="Enter the day.." value="<%=@datetime%>">
+    <input name="client[datestamp]" type="text" class="form-control" placeholder="Enter the day.." value="">
 	</p>
 
-<div class="form-group">
-  <label>Youre barber</label>
-	<select name="barber" class="form-control">
-    <% @barbers.each do |item| %>
-      <option <%= @barber == item['name'] ? 'selected' : ''%>><%= item['name'] %></option>
-    <% end %>
+<div class="form-group"> 
+<label>What color will you dye youre hair in</label>
+<select id="color" name="client[color]">
+  <option value="#7bd148">Green</option>
+  <option value="#5484ed">Blue</option>
+  <option value="#a4bdfc">Light blue</option>
+  <option value="#46d6db">Turquoise</option>
+  <option value="#7ae7bf">Light green</option>
+  <option value="#51b749">Dark green</option>
+  <option value="#fbd75b">Yellow</option>
+  <option value="#ffb878">Orange</option>
+  <option value="#ff887c">Skin tone</option>
+  <option value="#dc2127">Red</option>
+  <option value="#dbadff">Purple</option>
+  <option value="#ff00ff">Pink</option>
+  <option value="#e1e1e1">Gray</option>
+  <option value="#ffffff">White</option>
+  <option value="#000000">Black</option>
+  <option value="#786759">Brown</option>
 
-	</select>
-	</p>
-
+</select>
 </div>
+
 
 <div class="form-group">
   <button type="submit" class="btn btn-success">Sign up</button>
